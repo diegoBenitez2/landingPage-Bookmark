@@ -1,0 +1,49 @@
+.extension{
+  text-align: center;
+  margin-bottom: 8em;
+  &__title{
+    @include title;
+  }
+  &__copy{
+  @include copy;
+  }
+  
+}
+.cards{
+    margin: 2em auto;
+    padding: 3em 1em 1em;
+    background: $White;
+    text-align: center;
+     border-radius: 7px;
+     width: 65%;
+      box-shadow: 0 13px 20px 1px rgba(0,0,0,.1);
+      &__img{
+        width: 90px;
+        height: 90px;
+      }
+    &__container{
+      margin:0 auto;
+      text-align: center;
+    }
+    .img_dots{
+      display: block;
+      width: 100%;
+      margin-bottom: 1em;
+    }
+    &__button{
+      @include button;
+      background: $SoftBlue;
+      color: $LightGrayish;
+      padding-right: 3em;
+      padding-left: 3em;
+    }
+    &__copy{
+      @include copy;  
+      font-size: .7em;
+      font-weight: 400;
+       }
+    &__title{
+      @include title;
+      
+    }
+  }

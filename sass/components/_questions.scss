@@ -1,0 +1,30 @@
+.questions{
+  &__title{
+    @include title;
+    font-size: 1.3em;
+  }
+  &__copy{
+    @include copy;
+    margin-top: 1.5em;
+    font-weight: 400;
+  }
+  &__container{
+    border: 1px solid blue;
+    margin-bottom: 3em;
+  }
+  &__item{
+    list-style: none;
+    a{
+      display: block;
+      margin: 1em 0;
+      text-decoration: none;
+      border: 1px solid red;
+    }
+  }
+  &__button{
+    @include button;
+    background: $SoftBlue;
+    color:$LightGrayish ;
+  }
+  margin-bottom: 7em;
+}

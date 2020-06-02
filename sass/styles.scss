@@ -1,5 +1,19 @@
-@import './components/config';
 body{
   font-size: 18px;
   font-family: 'Rubik', sans-serif;
+  margin: 0;
+  overflow-wrap: normal;
 }
+.wrapper{
+  padding: 0 1.6em;
+  text-align: center;
+}
+@import './components/config';
+@import './components/header';
+@import'./components/hero';
+@import './components/features';
+@import './components/extension';
+@import './components/questions';
+@import './components/contact';
+@import './components/footer';
+

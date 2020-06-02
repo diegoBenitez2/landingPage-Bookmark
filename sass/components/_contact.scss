@@ -1,0 +1,33 @@
+.contact{
+  background: $SoftBlue;
+padding: 3em 0;
+  &__title1{
+    @include title;
+    color: $LightGrayish;
+    font-size: .65em;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+  }
+  &__title2{
+    @include title;
+    color: $LightGrayish;
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-bottom: 1.5xem;
+  }
+  &__email{
+    display: block;
+    border: 0;
+    border-radius: 4px;
+    width: 89%;
+    padding: 1.2em;
+    margin-bottom: 1em;
+  }
+  &__button{
+    @include button;
+    background: $SoftRed;
+    color: $LightGrayish;
+    width: 100%;
+    font-size: .8em;
+  }
+}

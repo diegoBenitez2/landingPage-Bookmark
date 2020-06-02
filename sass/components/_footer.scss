@@ -1,0 +1,29 @@
+.footer{
+  background: $VeryDarkBlue;
+  padding: 2em 0;
+  text-align: center;
+  &__logo{
+    margin-bottom: 2em;
+  }
+  .link{
+    text-decoration: none;
+    color: $LightGrayish;
+    text-transform: uppercase;
+    font-size: .6em;
+    display: block;
+    margin: 2em 0;
+    letter-spacing: .2em;
+
+  }
+  &__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0;
+  }
+  &__social{
+    margin: 0 .8em;
+    width: 20px;
+    height: 20px;
+  }
+}

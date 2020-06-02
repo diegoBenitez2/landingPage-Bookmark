@@ -1,14 +1,40 @@
 //primary
 $SoftBlue:hsl(231, 69%, 60%);
 $SoftRed: hsl(0, 94%, 66%);
+$White: white;
 //neutral
 $GrayishBlue: hsl(229, 8%, 60%);
 $VeryDarkBlue: hsl(229, 31%, 21%);
+$DarkBlue: hsl(233, 26%, 24%);
+$LightGrayish: hsl(220, 16%, 96%);
+
+
 
 @mixin copy {
-  color: $GrayishBlue;
+   color: $GrayishBlue;
+    text-align: center;
+    line-height: 1.7;
+    font-size: .7em;
+    padding: 0 1.5em;
+    margin-bottom: 2em;
 }
 @mixin button {
-  border-radius: 7px;
+  border-radius: 4px;
   padding: 1em;
+  border: 0;
+  font-weight: bold;
+}
+@mixin title {
+  text-align: center;
+  font-size: 1em;
+  color:$VeryDarkBlue;
+  font-weight: 500;
+}
+@mixin forms{
+  position: relative;
+  width: 80%;
+  border-bottom-left-radius: 70px;
+  height: 66%;
+  background: $SoftBlue;
+  z-index: -1;
 }
