@@ -38,3 +38,24 @@ $LightGrayish: hsl(220, 16%, 96%);
   background: $SoftBlue;
   z-index: -1;
 }
+
+ @keyframes copyout{
+   0%{
+     opacity: 1;
+   }
+   100%{
+     transform: translateX(-100%);
+     opacity: 0;
+     }
+ }
+ @keyframes copyin{
+    0%{
+     transform: translateX(-100%);
+      opacity: 0;
+
+   }
+   100%{transform: translateX(0%);
+      opacity: 1;
+   }  
+
+ }

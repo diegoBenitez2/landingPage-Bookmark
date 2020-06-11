@@ -9,16 +9,48 @@
     font-weight: 400;
   }
   &__container{
-    border: 1px solid blue;
+    // border: 1px solid blue;
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: center;
     margin-bottom: 3em;
   }
   &__item{
     list-style: none;
-    a{
-      display: block;
-      margin: 1em 0;
+    cursor: pointer;
+     border:0;
+    border-bottom: .5px solid rgba(145, 148, 161,.3);
+    &__a{
+      display: flex;
+      justify-content: space-between;
+      margin:0;
       text-decoration: none;
-      border: 1px solid red;
+     
+      padding: 1.8em 0 1.3em; 
+      text-align: left; 
+      color: rgba(37, 43, 70, 0.9);
+      font-size: .8em;
+      font-weight: 500;
+      svg{
+        height: 14px;
+        width: 19px;
+      }
+      .svg{
+        transform: rotate(180deg);
+      }
+      .path{
+        stroke: $SoftRed;
+      }
+    }
+    .answer{
+      display: none;
+      @include copy;
+      font-size: .7em;
+      text-align: left;
+      line-height: 2;
+      font-weight: 500;
+      padding: .2em;
     }
   }
   &__button{
