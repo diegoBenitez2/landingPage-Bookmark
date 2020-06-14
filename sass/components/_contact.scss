@@ -22,12 +22,21 @@ padding: 3em 0;
     width: 89%;
     padding: 1.2em;
     margin-bottom: 1em;
+    outline: 0;
   }
+   
+    
   &__button{
     @include button;
     background: $SoftRed;
     color: $LightGrayish;
     width: 100%;
     font-size: .8em;
+    cursor: pointer;
+    outline: 0;
+    will-change: transform;
+    &:active{
+      transform: scale(.9);
+    }
   }
 }

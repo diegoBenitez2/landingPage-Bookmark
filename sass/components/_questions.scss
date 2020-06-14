@@ -57,6 +57,12 @@
     @include button;
     background: $SoftBlue;
     color:$LightGrayish ;
-  }
+    cursor: pointer;
+    outline: 0;
+    will-change: transform;
+    &:active{
+      transform: scale(.9);
+    }
+  } 
   margin-bottom: 7em;
 }

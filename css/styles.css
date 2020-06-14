@@ -380,7 +380,12 @@ body {
     border: 0;
     font-weight: bold;
     background: #5368df;
-    color: #f3f4f6; }
+    color: #f3f4f6;
+    cursor: pointer;
+    outline: 0;
+    will-change: transform; }
+    .questions__button:active {
+      transform: scale(0.9); }
 
 .contact {
   background: #5368df;
@@ -409,7 +414,8 @@ body {
     border-radius: 4px;
     width: 89%;
     padding: 1.2em;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    outline: 0; }
   .contact__button {
     border-radius: 4px;
     padding: 1em;
@@ -418,7 +424,12 @@ body {
     background: #fa5757;
     color: #f3f4f6;
     width: 100%;
-    font-size: .8em; }
+    font-size: .8em;
+    cursor: pointer;
+    outline: 0;
+    will-change: transform; }
+    .contact__button:active {
+      transform: scale(0.9); }
 
 .footer {
   background: #252b46;
