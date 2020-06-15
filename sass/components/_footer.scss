@@ -26,4 +26,31 @@
     width: 20px;
     height: 20px;
   }
+  @include media1024{
+    display: grid;
+    grid-template-columns: 200px 1fr 2fr;
+    grid-template-areas: 'logo' 'link' 'social';
+    align-items: center;
+    padding: 2em 5em;
+
+    justify-content: space-between;
+    &__logo{
+      margin: 0;
+      grid-area: 'logo';
+    }
+    .footer-container-link{
+      display: flex;
+      .link{
+        margin: 0 0 0 4em;
+        height: 1em;
+        grid-area: 'links';
+      }
+    }
+    &__container{
+      margin: 0 ;
+      grid-area: 'social';
+      justify-content: flex-end;
+    }
+  }
+  
 }

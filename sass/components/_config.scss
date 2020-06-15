@@ -23,6 +23,11 @@ $LightGrayish: hsl(220, 16%, 96%);
   padding: 1em;
   border: 0;
   font-weight: bold;
+  cursor: pointer;
+  outline: 0;
+  &:active{
+    transform: scale(.9);
+  }
 }
 @mixin title {
   text-align: center;
@@ -54,8 +59,14 @@ $LightGrayish: hsl(220, 16%, 96%);
       opacity: 0;
 
    }
+
    100%{transform: translateX(0%);
       opacity: 1;
    }  
 
+ }
+ @mixin media1024 {
+   @media screen and (min-width:1024px) {
+     @content;
+   }
  }

@@ -1,7 +1,8 @@
 .questions{
   &__title{
     @include title;
-    font-size: 1.3em;
+    font-size: 1.8em;
+    font-weight: bold;
   }
   &__copy{
     @include copy;
@@ -65,4 +66,11 @@
     }
   } 
   margin-bottom: 7em;
+  @include media1024{
+  
+    .wrapper{
+      width: 40%;
+      margin: 0 auto;
+    }
+  }
 }

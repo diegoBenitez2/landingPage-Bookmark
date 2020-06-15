@@ -1,4 +1,6 @@
 .features{
+  text-align: center;
+  
   &__title{
     @include title;
   }
@@ -129,6 +131,78 @@
 
       }
     }
+    @include media1024{
+      &__title{
+        font-size: 2em;
+        font-weight: bold;
+      }
+    &__copy{
+      width: 30%;
+      margin: 1em auto 2em;
+    }
+    &__container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 40%;
+      margin: 0 auto 3.5em;
+      &__image{
+        z-index: 2;
+        width: 50%;
+        height: 100%;
+        .features-img{
+          width: 80%;
+          height: 75%;
+        }
+        .forms{
+          height: 75%;
+          top: 3.5em;
+        }
+      }
+      &__copys{
+        width: 50%;
+        height: 100%;
+        z-index: 1;
+        &__copy{
+          padding: 0 3em 0 4em;
+          top: 30px;
+          text-align: left  ;
+          .title{
+            font-weight: bold;
+            text-align: left;
+          }
+          .copy{
+           width: 60%;
+            text-align: left;
+          }
+          .btn-copy{
+            @include button;
+            background: $SoftBlue;
+            color: $LightGrayish;
+          }
+        }
+      }
+    }
+    &__items{
+      & a{
+        padding: 1em 2em;
+        &:hover{
+        font-weight: 700;
+        }
+
+      }
+      border: 0;
+      .selected{
+        width: 100%;
+      }
+    }
+    .container_image_copys{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 400px;
+    }
+  }
 }
 
   

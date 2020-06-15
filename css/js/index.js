@@ -35,6 +35,10 @@ $featuresItems[1].addEventListener('click',function(){
   $featuresCopy[2].style.display ='none'
   $featuresCopy[1].style.animation ='copyin .5s ease forwards'; 
   $featuresCopy[1].style.display ='block'
+  $featuresItems[2].style.fontWeight ='initial'; 
+  $featuresItems[0].style.fontWeight ='initial'; 
+  $featuresItems[1].style.fontWeight ='bold'; 
+
   //forms selected
   $selectedItem1.style.display='none'
   $selectedItem2.style.display='block'
@@ -54,6 +58,10 @@ $featuresItems[2].addEventListener('click',function(){
   $featuresCopy[1].style.display ='none'
   $featuresCopy[2].style.animation ='copyin .5s ease forwards'; 
   $featuresCopy[2].style.display ='block'
+  $featuresItems[1].style.fontWeight ='initial'; 
+  $featuresItems[0].style.fontWeight ='initial'; 
+  $featuresItems[2].style.fontWeight ='bold'; 
+
    //forms selected
   $selectedItem1.style.display='none'
   $selectedItem2.style.display='none'
@@ -73,6 +81,10 @@ $featuresItems[0].addEventListener('click',function(){
   $featuresCopy[2].style.display ='none'
   $featuresCopy[0].style.animation ='copyin .5s ease forwards'; 
   $featuresCopy[0].style.display ='block'
+  $featuresItems[1].style.fontWeight ='initial'; 
+  $featuresItems[2].style.fontWeight ='initial'; 
+  $featuresItems[0].style.fontWeight ='bold'; 
+
  //forms selected
   $selectedItem1.style.display='block'
   $selectedItem2.style.display='none'

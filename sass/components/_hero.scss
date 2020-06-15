@@ -37,6 +37,45 @@
         color: $DarkBlue;
     }
   }
+  @include media1024{
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    .wrapper{
+      width: 40%;
+      padding: 5em 0;
+      margin-left: 7em;
+    }
+    &__titleH1{
+      text-align: left;
+      font-size: 2em;
+      font-weight: bold;
+      padding: 0 1em 0 0;
+    }
+    &__image{
+      width: 50%;
+      height: 500px;
+      background-size: 90% 90%;
+      .forms{
+        height: 70%;
+      }
+    }
+    &__button{
+      &__1{
+        margin-right: 2em;
+      }
+    }
+
+    &__copy{
+      text-align: left;
+      font-size: 1em;
+      padding: 0 2em 0 0;
+    }
+    .container_button{
+      justify-content: left;
+    }
+     
+  }
 }
 .forms{
   @include forms;

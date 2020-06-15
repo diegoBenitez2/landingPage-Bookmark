@@ -10,7 +10,18 @@
     }
 
   }
+  @include media1024{
+    padding: 1rem 8em;
+    align-items: center;
+    .hamburguer{
+      display: none;
+    }
+    img{
+      height: 1.3em;
+    }
+  }
 }
+
 .nav{
   
   display: none;
@@ -72,6 +83,54 @@
     &:hover{
       background-color: hsla(0, 0%, 100%,.8);
       color:hsla(233, 26%, 24%,.9);
+    }
+  }
+  @include media1024{
+    display: flex;
+    justify-content: space-between;
+    position: initial;
+    &__header{
+      display: none;
+    }
+    &__body{
+      padding: 0;
+      display: flex;
+      background: white;
+      align-items: center;
+    }
+    &__items {
+      &:hover{
+        border-bottom: 1px solid rgba(0,0,0,.5);;
+   
+      }
+    a{
+      color: $VeryDarkBlue;
+      letter-spacing: initial;
+      font-size: .7em;
+      font-weight: 500;
+      margin: 0 2em;
+      &:hover{
+             color: $VeryDarkBlue;
+      }
+    }}
+
+    &__btn{
+      background: $SoftRed;
+      margin: 0 0 0 2em;
+      font-size: .7em;
+      font-weight: bold;
+      padding: 1em 2.5em;
+      letter-spacing: initial;
+      outline: 0;
+      cursor: pointer;
+      will-change: transform;
+      &:hover{
+        background: $SoftRed;
+        color: white;
+      }
+      &:active{
+        transform: scale(.9);
+      }
     }
   }
 }
