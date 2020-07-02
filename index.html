@@ -208,10 +208,16 @@
       <h1 class="contact__title2">  Stay up-to-date with what we’re doing
       </h1>
       <div class="container-button-email">
-      <input type="email" name="" id="" class="contact__email" placeholder="Enter your email addreess"></input>
-      <button class="contact__button">  Contact Us
-      </button>
+        <form   novalidate name="contact"action="" method="POST" class="contact__form-email">
+          <label for="contact_mail" id="mail">
+            <input type="email" name="email" class="contact__email" id= "contact_email" placeholder="Enter your email addreess" required>
+            <span class="contact__error" aria-live="polite"></span>
+          </label>
+          <input type="submit" class="contact__button" value="Contact Us"> 
+        </form>
       </div>
+      
+      
 
     </div>
   </section>

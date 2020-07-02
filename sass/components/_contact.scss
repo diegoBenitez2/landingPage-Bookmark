@@ -19,15 +19,18 @@ padding: 3em 0;
     display: block;
     border: 0;
     border-radius: 4px;
-    width: 89%;
+    width: 100%;
     padding: 1.2em;
-    margin-bottom: 1em;
     outline: 0;
+    &__icon{
+      position: relative;
+      right: 2em;
+    }
   }
    
-    
   &__button{
     @include button;
+    margin-top: 1em;
     background: $SoftRed;
     color: $LightGrayish;
     width: 100%;
@@ -35,10 +38,34 @@ padding: 3em 0;
     cursor: pointer;
     outline: 0;
     will-change: transform;
+    height: 52px;
     &:active{
       transform: scale(.9);
     }
+    &:hover{
+      background: $LightGrayish;
+      border: 2px solid $SoftRed;
+      color: $SoftRed;
+    }
   }
+  &__error{
+    display: block;
+    width: 100%;
+    position: relative;
+    top: -.3em;
+    z-index: 1;
+    box-sizing: border-box;
+    background: $SoftRed;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    color: $LightGrayish;
+    font-size: .6em;
+    font-weight: bold;
+    text-align: left;
+    }
+    &__email:invalid{
+    border: 2px solid $SoftRed;
+    }
   @include media1024{
     .wrapper{
       width: 35%;
@@ -49,14 +76,38 @@ padding: 3em 0;
 
     }
     &__button{
+      padding: 1em;
       width: 30%;
+      margin-left: 10px;
+      margin-top: 0;
     }
     &__email{
-      margin: 0 1em 0 0;
-    }
+      margin: 0;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 6px;
+      position: relative;
+      z-index: 2;
+      }
     &__title2{
       padding: 0 5em;
     }
-    
+    &__form-email{
+      display: flex;
+      width: 100%;
+      margin: 0;
+      justify-content: space-between;
+    }
   }
+  label{
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 2em);
+  margin: 0;
+  }
+ 
 }
+
+  .active{
+   padding: 1em;
+  }

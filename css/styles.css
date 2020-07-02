@@ -584,10 +584,12 @@ body {
     display: block;
     border: 0;
     border-radius: 4px;
-    width: 89%;
+    width: 100%;
     padding: 1.2em;
-    margin-bottom: 1em;
     outline: 0; }
+    .contact__email__icon {
+      position: relative;
+      right: 2em; }
   .contact__button {
     border-radius: 4px;
     padding: 1em;
@@ -595,17 +597,39 @@ body {
     font-weight: bold;
     cursor: pointer;
     outline: 0;
+    margin-top: 1em;
     background: #fa5757;
     color: #f3f4f6;
     width: 100%;
     font-size: .8em;
     cursor: pointer;
     outline: 0;
-    will-change: transform; }
+    will-change: transform;
+    height: 52px; }
     .contact__button:active {
       transform: scale(0.9); }
     .contact__button:active {
       transform: scale(0.9); }
+    .contact__button:hover {
+      background: #f3f4f6;
+      border: 2px solid #fa5757;
+      color: #fa5757; }
+  .contact__error {
+    display: block;
+    width: 100%;
+    position: relative;
+    top: -.3em;
+    z-index: 1;
+    box-sizing: border-box;
+    background: #fa5757;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    color: #f3f4f6;
+    font-size: .6em;
+    font-weight: bold;
+    text-align: left; }
+  .contact__email:invalid {
+    border: 2px solid #fa5757; }
   @media screen and (min-width: 1024px) {
     .contact .wrapper {
       width: 35%;
@@ -613,11 +637,32 @@ body {
     .contact .container-button-email {
       display: flex; }
     .contact__button {
-      width: 30%; }
+      padding: 1em;
+      width: 30%;
+      margin-left: 10px;
+      margin-top: 0; }
     .contact__email {
-      margin: 0 1em 0 0; }
+      margin: 0;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 6px;
+      position: relative;
+      z-index: 2; }
     .contact__title2 {
-      padding: 0 5em; } }
+      padding: 0 5em; }
+    .contact__form-email {
+      display: flex;
+      width: 100%;
+      margin: 0;
+      justify-content: space-between; } }
+  .contact label {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 2em);
+    margin: 0; }
+
+.active {
+  padding: 1em; }
 
 .footer {
   background: #252b46;

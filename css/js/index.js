@@ -15,6 +15,10 @@ const $hamburguer = document.getElementById('hamburguer')
 const $close = document.getElementById('close')
 const $nav = document.getElementById('navi')
 const $herder_logo =document.getElementById('header__logo')
+const $form = document.getElementsByTagName('form')[0]
+const $contact_email = document.getElementById("contact_email")
+const $emialError = document.querySelector('span.contact__error')
+const $mail = document.getElementById('mail')
 
 $hamburguer.addEventListener('click',()=>{
  $nav.style.display ='block'
@@ -115,6 +119,35 @@ $quetions_item[3].addEventListener('click',()=>{
   $svgArrow[3].classList.toggle('svg')
   $pathArrow[3].classList.toggle('path')
 })
+
+
+$contact_email.addEventListener('input',(event)=>{
+  if($contact_email.validity.valid){
+    $emialError.innerHTML = ''
+    $emialError.className= "contact__error"
+  }
+  else{
+    showError()
+  }
+})
+
+$form.addEventListener('submit',(event)=>{
+  if(!$contact_email.validity.valid){
+    showError()
+    event.preventDefault()
+  }
+})
+
+function showError(){
+  if($contact_email.validity.valueMissing){
+    $emialError.classList.add('active')
+    $emialError.textContent = 'You must enter an email address.'
+  } 
+  else if($contact_email.validity.typeMismatch){
+    $emialError.classList.add('active')
+    $emialError.textContent = 'Whoops!, make sure it´s an email?'
+  }
+}
   
 
 
