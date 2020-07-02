@@ -19,19 +19,19 @@ const $form = document.getElementsByTagName('form')[0]
 const $contact_email = document.getElementById("contact_email")
 const $emialError = document.querySelector('span.contact__error')
 const $mail = document.getElementById('mail')
-
+//MENU HAMBURGUER
 $hamburguer.addEventListener('click',()=>{
  $nav.style.display ='block'
  $hamburguer.style.display = 'none'
  $herder_logo.style.display ='none'
 })
-
+//MENU CLOSE
 $close.addEventListener('click',()=>{
   $nav.style.display ='none'
  $hamburguer.style.display = 'block'
  $herder_logo.style.display ='block'
 })
-
+//SECTION FEATURES
 $featuresItems[1].addEventListener('click',function(){
   $featuresCopy[0].style.animation ='copyout .5s ease forwards'
   $featuresCopy[0].style.display ='none'
@@ -120,7 +120,7 @@ $quetions_item[3].addEventListener('click',()=>{
   $pathArrow[3].classList.toggle('path')
 })
 
-
+//VALIDATIONS EMAIL
 $contact_email.addEventListener('input',(event)=>{
   if($contact_email.validity.valid){
     $emialError.innerHTML = ''
@@ -139,15 +139,15 @@ $form.addEventListener('submit',(event)=>{
 })
 
 function showError(){
+   $emialError.classList.add('active')
   if($contact_email.validity.valueMissing){
-    $emialError.classList.add('active')
     $emialError.textContent = 'You must enter an email address.'
   } 
   else if($contact_email.validity.typeMismatch){
-    $emialError.classList.add('active')
     $emialError.textContent = 'Whoops!, make sure it´s an email?'
   }
 }
+   
   
 
 
