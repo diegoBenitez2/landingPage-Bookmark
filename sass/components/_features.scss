@@ -66,7 +66,7 @@
           @include forms;
           display: block;
           position: absolute;
-          top: 1.6em;
+          top: 2em;
           border-radius: 0;
           border-top-right-radius: 70px;
           border-bottom-right-radius:70px;
@@ -105,6 +105,11 @@
           top: 0;
           transition: .5s ease forwards;
           padding: 0 1.6em;
+          .btn-copy{
+            @include button;
+            background: $SoftBlue;
+            color: $LightGrayish;
+          }
            &:nth-child(1){
              display: block;
            }
@@ -131,6 +136,20 @@
 
       }
     }
+    @include media570{
+      .features-img{
+        width: 60%;
+        &:nth-child(1){
+          right: 180px;
+        }
+      }
+      &__container__image{
+        height: 50vw;
+        .forms{
+          width: 60%;
+        }
+      }
+    }
     @include media1024{
       &__title{
         font-size: 2em;
@@ -153,6 +172,9 @@
         .features-img{
           width: 80%;
           height: 75%;
+          &:nth-child(1){
+            right: 1.6em;
+          }
         }
         .forms{
           height: 75%;
@@ -174,11 +196,6 @@
           .copy{
            width: 60%;
             text-align: left;
-          }
-          .btn-copy{
-            @include button;
-            background: $SoftBlue;
-            color: $LightGrayish;
           }
         }
       }
@@ -204,13 +221,3 @@
     }
   }
 }
-
-  
-  
-  
-  
-
-
-             
-
-         

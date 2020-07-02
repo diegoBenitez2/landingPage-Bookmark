@@ -19,6 +19,9 @@ const $form = document.getElementsByTagName('form')[0]
 const $contact_email = document.getElementById("contact_email")
 const $emialError = document.querySelector('span.contact__error')
 const $mail = document.getElementById('mail')
+const $media570= window.matchMedia("(min-width:570px) and (max-width:1023px)")
+const $media2= window.matchMedia("(min-width: 320px)")
+const $media3 = window.matchMedia("(min-width : 1024px)")
 //MENU HAMBURGUER
 $hamburguer.addEventListener('click',()=>{
  $nav.style.display ='block'
@@ -32,6 +35,35 @@ $close.addEventListener('click',()=>{
  $herder_logo.style.display ='block'
 })
 //SECTION FEATURES
+///VALIDATIONS MEDIAS QUERY
+function showMedia(p,mq){
+  if(mq.matches){
+    // $media2.removeListener()
+      if($featuresImgs[0].style.display ==='block'){
+        $featuresImgs[0].style.right= p;
+      }
+      else if($featuresImgs[1].style.display ==='block'){
+        $featuresImgs[1].style.right= p;
+      }
+      else{
+        $featuresImgs[2].style.right= p;
+      }
+    
+    }
+}
+if(matchMedia){
+$media570.addListener(()=>{
+    showMedia('180px',$media570)
+})
+$media2.addListener(()=>{
+   showMedia('1.6em',$media2)
+  })
+  $media3.addListener(()=>{
+  showMedia('1.6em',$media3)
+  })
+}
+
+//ANIMATIONS FEATURES
 $featuresItems[1].addEventListener('click',function(){
   $featuresCopy[0].style.animation ='copyout .5s ease forwards'
   $featuresCopy[0].style.display ='none'
@@ -53,7 +85,13 @@ $featuresItems[1].addEventListener('click',function(){
   $featuresImgs[2].style.display='none';
   $featuresImgs[2].style.right='100%';
   $featuresImgs[1].style.display='block';
-  $featuresImgs[1].style.right='1.6em';
+  if($media570.matches){
+    $featuresImgs[1].style.right='180px';
+  }
+  else {
+    $featuresImgs[1].style.right='1.6em';
+  }
+  
 })
 $featuresItems[2].addEventListener('click',function(){
   $featuresCopy[0].style.animation ='copyout .5s ease forwards'
@@ -76,7 +114,12 @@ $featuresItems[2].addEventListener('click',function(){
   $featuresImgs[1].style.display='none';
   $featuresImgs[1].style.right='100%';
   $featuresImgs[2].style.display='block';
-  $featuresImgs[2].style.right='1.6em';
+  if($media570.matches){
+    $featuresImgs[2].style.right='180px';
+  }
+  else{
+    $featuresImgs[2].style.right='1.6em';
+  }
 })
 $featuresItems[0].addEventListener('click',function(){
   $featuresCopy[1].style.animation ='copyout .5s ease forwards'
@@ -99,7 +142,12 @@ $featuresItems[0].addEventListener('click',function(){
   $featuresImgs[2].style.display='none';
   $featuresImgs[2].style.right='100%';
   $featuresImgs[0].style.display='block';
-  $featuresImgs[0].style.right='1.6em';
+  if($media570.matches){
+    $featuresImgs[0].style.right='180px';
+  }
+  else{
+    $featuresImgs[0].style.right='1.6em';
+  }
 
 })
 //SECTION QUESTIONS

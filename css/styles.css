@@ -137,6 +137,13 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end; }
+  .hero__image .forms {
+    position: relative;
+    width: 80%;
+    border-bottom-left-radius: 70px;
+    height: 66%;
+    background: #5368df;
+    z-index: -1; }
 
 .hero__titleH1 {
   color: #252b46;
@@ -156,7 +163,7 @@ body {
 
 .hero .container_button {
   display: flex;
-  justify-content: space-between; }
+  justify-content: center; }
 
 .hero__button__1 {
   border-radius: 4px;
@@ -165,6 +172,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   outline: 0;
+  margin: 0 1em 0 0;
   background: #5368df;
   color: white;
   box-shadow: 0 13px 20px 1px rgba(0, 0, 0, 0.1); }
@@ -183,6 +191,26 @@ body {
   color: #2d314d; }
   .hero__button__2:active {
     transform: scale(0.9); }
+
+@media screen and (min-width: 570px) {
+  .hero__image {
+    background-size: 65%;
+    background-position: 90% 95%;
+    height: 55vw; }
+  .hero .forms {
+    width: 55%;
+    height: 65%; } }
+
+@media screen and (min-width: 768px) {
+  .hero__copy {
+    padding: 0 7em; }
+  .hero__image {
+    background-size: 65%;
+    background-position: 90% 100%;
+    height: 50vw; }
+  .hero .forms {
+    width: 55%;
+    height: 70%; } }
 
 @media screen and (min-width: 1024px) {
   .hero {
@@ -203,7 +231,8 @@ body {
       height: 500px;
       background-size: 90% 90%; }
       .hero__image .forms {
-        height: 70%; }
+        height: 70%;
+        width: 70%; }
     .hero__button__1 {
       margin-right: 2em; }
     .hero__copy {
@@ -212,14 +241,6 @@ body {
       padding: 0 2em 0 0; }
     .hero .container_button {
       justify-content: left; } }
-
-.forms {
-  position: relative;
-  width: 80%;
-  border-bottom-left-radius: 70px;
-  height: 66%;
-  background: #5368df;
-  z-index: -1; }
 
 .features {
   text-align: center; }
@@ -284,7 +305,7 @@ body {
       z-index: -1;
       display: block;
       position: absolute;
-      top: 1.6em;
+      top: 2em;
       border-radius: 0;
       border-top-right-radius: 70px;
       border-bottom-right-radius: 70px;
@@ -313,6 +334,17 @@ body {
       top: 0;
       transition: .5s ease forwards;
       padding: 0 1.6em; }
+      .features__container__copys__copy .btn-copy {
+        border-radius: 4px;
+        padding: 1em;
+        border: 0;
+        font-weight: bold;
+        cursor: pointer;
+        outline: 0;
+        background: #5368df;
+        color: #f3f4f6; }
+        .features__container__copys__copy .btn-copy:active {
+          transform: scale(0.9); }
       .features__container__copys__copy:nth-child(1) {
         display: block; }
       .features__container__copys__copy:nth-child(2) {
@@ -336,6 +368,15 @@ body {
         margin-bottom: 2em;
         line-height: 1.7;
         padding: 0; }
+  @media screen and (min-width: 570px) {
+    .features .features-img {
+      width: 60%; }
+      .features .features-img:nth-child(1) {
+        right: 180px; }
+    .features__container__image {
+      height: 50vw; }
+      .features__container__image .forms {
+        width: 60%; } }
   @media screen and (min-width: 1024px) {
     .features__title {
       font-size: 2em;
@@ -356,6 +397,8 @@ body {
         .features__container__image .features-img {
           width: 80%;
           height: 75%; }
+          .features__container__image .features-img:nth-child(1) {
+            right: 1.6em; }
         .features__container__image .forms {
           height: 75%;
           top: 3.5em; }
@@ -373,17 +416,6 @@ body {
           .features__container__copys__copy .copy {
             width: 60%;
             text-align: left; }
-          .features__container__copys__copy .btn-copy {
-            border-radius: 4px;
-            padding: 1em;
-            border: 0;
-            font-weight: bold;
-            cursor: pointer;
-            outline: 0;
-            background: #5368df;
-            color: #f3f4f6; }
-            .features__container__copys__copy .btn-copy:active {
-              transform: scale(0.9); }
     .features__items {
       border: 0; }
       .features__items a {
@@ -400,7 +432,7 @@ body {
 
 .extension {
   text-align: center;
-  margin-bottom: 8em; }
+  margin: 8em 0; }
   .extension__title {
     text-align: center;
     font-size: 1em;
@@ -660,9 +692,8 @@ body {
     flex-direction: column;
     width: calc(100% - 2em);
     margin: 0; }
-
-.active {
-  padding: 1em; }
+  .contact .active {
+    padding: 1em; }
 
 .footer {
   background: #252b46;

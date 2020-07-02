@@ -65,6 +65,16 @@ $LightGrayish: hsl(220, 16%, 96%);
    }  
 
  }
+ @mixin media570{
+  @media screen  and (min-width: 570px){
+    @content;
+  }
+ }
+ @mixin media768{
+  @media screen and (min-width:768px) {
+    @content;
+  }
+ }
  @mixin media1024 {
    @media screen and (min-width:1024px) {
      @content;
